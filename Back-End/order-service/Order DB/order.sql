@@ -1,0 +1,11 @@
+CREATE DATABASE orderdb;
+
+USE orderdb;
+
+CREATE TABLE orders (
+  id BIGINT AUTO_INCREMENT PRIMARY KEY,
+  product_id BIGINT NOT NULL,
+  quantity INT NOT NULL,
+  order_date DATETIME DEFAULT CURRENT_TIMESTAMP,
+  status VARCHAR(50) DEFAULT 'Placed'
+);
